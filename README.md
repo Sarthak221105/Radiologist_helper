@@ -1,3 +1,14 @@
+---
+title: Radiologist Helper
+emoji: 🩺
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.30.0
+app_file: app.py
+pinned: false
+---
+
 # 🩺 Radiologist Helper
 
 Radiologist Helper is a modern web application built with **Streamlit** and **PyTorch** designed to assist radiologists and healthcare professionals. It classifies different types of medical body scans as **Normal** or **Abnormal** (or specific pathologies depending on the scan type).
