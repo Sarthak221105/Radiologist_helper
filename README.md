@@ -66,22 +66,16 @@ The application supports the following body scan types:
 
 We provide an optimized Docker setup running on CPU-only PyTorch to minimize container size.
 
-### Using Docker Compose (Recommended)
-Build and start the application in the background:
-```bash
-docker compose up --build
-```
-Access the application at `http://localhost:8501`.
-
-### Using Docker CLI
 1. **Build the Docker Image:**
    ```bash
-   docker build -t radiologist-helper -f docker/Dockerfile .
+   docker build -t radiologist-helper .
    ```
+
 2. **Run the Container:**
    ```bash
    docker run -p 8501:8501 --name radiologist_helper_app radiologist-helper
    ```
+   Access the application at `http://localhost:8501`.
 
 ---
 
@@ -91,9 +85,7 @@ Access the application at `http://localhost:8501`.
 Radiologist_helper/
 ├── app.py                  # Main Streamlit application
 ├── requirements.txt        # Python package dependencies
-├── docker/
-│   └── Dockerfile          # Optimized CPU-only Docker configuration
-├── docker-compose.yml      # Docker Compose configuration
+├── Dockerfile              # Optimized CPU-only Docker configuration
 ├── .dockerignore           # Files ignored by Docker daemon
 ├── trained_models/         # Directory containing trained PyTorch models (.pth)
 ├── models/                 # Jupyter Notebooks for model training

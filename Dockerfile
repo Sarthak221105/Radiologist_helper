@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy the requirements file from the host root
+# Copy the requirements file
 COPY requirements.txt .
 
 # Install dependencies
