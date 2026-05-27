@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  radiologist-helper:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: radiologist_helper_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - ENV=development
+    restart: unless-stopped
