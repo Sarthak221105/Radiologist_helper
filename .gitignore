@@ -1,4 +1,3 @@
-.pth
 datasets/
-trained_models/
-*.png
+__pycache__/
+.idea/
